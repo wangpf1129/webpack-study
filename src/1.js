@@ -1,2 +1,2 @@
-import './1.css'
-export default '11111'
+import './1.less'
+export default 'x'

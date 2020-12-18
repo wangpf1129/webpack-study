@@ -17,18 +17,21 @@ module.exports = {
     }),
   ],
   module: {
-    rules: [{
-      test: /\.css$/,
-      use: [{
-          loader: MiniCssExtractPlugin.loader,
-          options: {
-            // 你可以在这里指定特定的 publicPath
-            // 默认情况下使用 webpackOptions.output 中的 publicPath
-            publicPath: '../',
+    rules: [
+      ...base.module.rules,
+      {
+        test: /\.css$/i,
+        use: [{
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              // 你可以在这里指定特定的 publicPath
+              // 默认情况下使用 webpackOptions.output 中的 publicPath
+              publicPath: '../',
+            },
           },
-        },
-        'css-loader',
-      ],
-    }, ],
+          'css-loader',
+        ],
+      },
+    ],
   },
 };
