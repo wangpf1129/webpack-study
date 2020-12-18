@@ -5,7 +5,7 @@ import img from './assets/1.jpg'
 const div =document.querySelector('#app')
 
 div.innerHTML = `
-<<img src="${img}" alt="">>
+<<img src="${img}" alt="">
 `
 
 const btn = document.createElement('button')
